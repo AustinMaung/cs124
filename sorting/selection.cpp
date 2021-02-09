@@ -30,7 +30,7 @@ void selection_sort(int a[], int size)
       int min_pos = min_position(a, next, size - 1);
       // Swap the next element and the minimum
       swap(a[next], a[min_pos]);
-      print(a,20);
+    //   print(a,20);
    }
 }
 
