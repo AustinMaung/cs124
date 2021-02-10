@@ -68,7 +68,10 @@ void merge_sort(int a[], int from, int to)
    if (from == to) { return; }
    int mid = (from + to) / 2;
    // Sort the first and the second half
+   cout<< "first half "<< from << " " << mid << endl;
    merge_sort(a, from, mid);
+   cout<< "second half "<< mid + 1 << " " << to << endl;
    merge_sort(a, mid + 1, to);
+   cout<< from << " " << mid << " " << to << endl;
    merge(a, from, mid, to);
 }

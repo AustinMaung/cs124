@@ -30,13 +30,22 @@ void selection_sort(int a[], int size)
       int min_pos = min_position(a, next, size - 1);
       // Swap the next element and the minimum
       swap(a[next], a[min_pos]);
-    //   print(a,20);
+      print(a,20);
    }
 }
 
 void print(int a[], int size)
 {
    for (int i = 0; i < size; i++)
+   {
+      cout << a[i] << " ";
+   }
+   cout << endl;
+}
+
+void print(int a[], int start, int size)
+{
+   for (int i = start; i < size; i++)
    {
       cout << a[i] << " ";
    }

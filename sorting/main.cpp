@@ -16,7 +16,7 @@ int main()
         values[i] = rand() % 100;
     }
     print(values, SIZE);
-//    selection_sort(values, SIZE);
+    // selection_sort(values, SIZE);
     merge_sort(values, 0, SIZE - 1);
     print(values, SIZE);
     return 0;
