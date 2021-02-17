@@ -1,3 +1,7 @@
+// CS 124-03 
+// FILE: rain.cpp
+// IMPLEMENTS: ask_for_values() enter_element() get_total() get_average() max_position()
+// min_position() swap() selection_sort(), parameters and return type not given here
 #include <iostream> // Provides cout
 #include "rain.h"
 
@@ -16,7 +20,8 @@ void ask_for_values(double a[], int size)
         }
         else
         {
-            cout << "Enter the rainfall (in inches) for month #1: " << endl;
+            cout << "Enter the rainfall (in inches) for month #" 
+            << index + 1 << ": " << endl;
         }
         //assume input are valid values
         double val;
@@ -24,19 +29,19 @@ void ask_for_values(double a[], int size)
         if(enter_element(a, val, index, size))
         {
             index++;
-            error = true;
+            error = false;
         }
         else
         {
-            error = false;
+            error = true;
         }
     }
 }
 bool enter_element(double a[], double val, int index,int size)
-{
-    if(index + 1 <= size && val > 0)
+{ 
+    if((index + 1 <= size) && (val >= 0))
     {
-        a[index] == val;
+        a[index] = val;
         return true;
     }
     return false;
