@@ -65,7 +65,7 @@ int main()
     cout << "Array before being sorted:" << endl;
     print_array(arr, SIZE);
     heap_sort(arr, SIZE);
-    cout << "Array after being sorted:" << endl;
+    cout << "Array after being sorted: tests" << endl;
     print_array(arr, SIZE);
 }
 /*
