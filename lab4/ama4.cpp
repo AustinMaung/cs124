@@ -36,4 +36,5 @@ Smaller of 56.7 and 11.3: 11.3
 Smaller of f and F: F
 Smaller of -1 and 0: -1
 Smaller of 100 and 110.3: 100
+another test
 */
