@@ -54,4 +54,3 @@ void printMin(T arr[], int size)
     }
     cout << arr[size - 1] << ": " << min(arr,size) << endl;
 }
-//test
