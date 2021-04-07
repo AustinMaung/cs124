@@ -3,12 +3,23 @@
 #include"paren.h"
 using namespace std;
 
+// Functions: main()
+// Description: checks if user inputted strings have balanced parenthesis.
+//     Also validates if the strings have parenthesis.
+// Programmer: Austin Maung
+// Date: 4/4/2021
+// Version: 1.0
+// Hardware: HP Pavilion
+// Software: Windows 10
+// Compiles under Visual Studio Code
+
 int main(){
     bool run = true;
     string input;
 
     cout << "EVALUATING EXPRESSION PARENTHESIS" << endl;
-    cout << "This program will detect unbalanced expression parentheses." << endl;
+    cout << "This program will detect unbalanced expression parentheses."
+    << endl;
     while(true)
     {
         cout << "Type in a string with some parenthesis:";

@@ -1,3 +1,31 @@
+// CS124-03
+// FILE: DynStk.h
+// PROVIDES: A Stack template for lab 6
+// FUNCTIONS in this toolkit:   
+//   LinkedList()   Constructor
+//   ~LinkedList();  Destructor
+// void push(T);
+//     precondition: any printable value type like double or string
+//     postcondition: prints what value is being passed in and adds
+//     vale into the stack
+// T pop();
+//     postcondition: prints the value of the top element in stack,
+//     also takes the element out of the stack and returns it's,
+//     value just in case if value needs to be stored
+//  HELPER FUNCTIONS:
+//  bool has_parenthesis(string input);
+//     precondition: a string, not a const char array
+//     postcondition: truth value depending on if the inputted string has
+//     a parenthesis
+//  bool read_parenthesis(string input);
+//     precondition: a string with atleast one parenthesis
+//     postcondion: main function, places parenthesis into a stack then
+//     compares the amount of left parenthesis to right by passing the 
+//     stack into count_parenthesis
+//  int count_parenthesis(Stack<char> arr);
+//     postcondition: helper function for read_parenthesis that 
+//     returns the amount of left parenthesis minus right parenthesis. 0
+//     would result in balanced parenthesis.
 #include<iostream>
 #include<string>
 using namespace std;
@@ -29,7 +57,6 @@ public:
     void push(T);
     T pop();
 };
-void test();
 bool has_parenthesis(string input);
 bool read_parenthesis(string input);
 int count_parenthesis(Stack<char> arr);
@@ -47,7 +74,6 @@ Stack<T>::~Stack() {
 
 template<typename T>
 void Stack<T>::push(T val) {
-    // cout << "Pushing " << val << endl;
     ListNode* temp = new ListNode;
     temp->value = val;
     temp->next = nullptr;
@@ -68,23 +94,17 @@ T Stack<T>::pop() {
     if(tail != nullptr){
         T val = tail->value;
         ListNode* before = tail->prev;
-        //if before is null, then it would have no next 
-        //pointer to change
         if(before != nullptr)
         {
             before->next = nullptr;
         }
-        //delete and replace old tail with node that
-        //was previous to it
         tail->prev = nullptr;
         tail = before;
 
-        // cout << val << endl;
         return val;
     }
     else
     {
-        // cout << "Attempting to POP again... The stack is empty." << endl;
         return 'a';
     }
 }

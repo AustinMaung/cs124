@@ -1,13 +1,8 @@
-#include <iostream> // Provides cout
+#include <iostream> 
 #include <string>
 #include "paren.h"
 
 using namespace std;
-
-void test()
-{
-    cout << "this is a test" << endl;
-}
 
 bool has_parenthesis(string input)
 {
@@ -64,6 +59,8 @@ bool read_parenthesis(string input)
             arr.push(input[i]);
         }
     }
+    //0 is the only value where the parenthesis
+    //are balanced
     if(count_parenthesis(&arr) != 0)
     {
         return false;
