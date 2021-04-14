@@ -32,9 +32,7 @@ void HashTable::insertItem(int key, string value){
             break;
         }
     }
-    if(!keyExists){
-        bucket.emplace_back(key, value);
-    }
+    if(!keyExists) bucket.emplace_back(key, value);
 }
 
 void HashTable::removeItem(int key){
@@ -54,10 +52,7 @@ void HashTable::removeItem(int key){
             break;
         }
     }
-    if(!keyExists){
-        cout << "Key not found, nothing removed" << endl;
-    }
-    return;
+    if(!keyExists) cout << "Key not found, nothing removed" << endl;
 }
 
 void HashTable::printTable(){
@@ -73,5 +68,4 @@ void HashTable::printTable(){
             }
         }
     }
-    return;
 }

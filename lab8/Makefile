@@ -7,5 +7,6 @@ ama8.o: ama8.cpp hashtable.h
 hashtable.o: hashtable.cpp hashtable.h
 	g++ -c hashtable.cpp
 
-clean: #del is rm for windows
-	-rm -f lab8.exe *.o
+clean: #del is rm for windows -rm -f lab8.exe *.o
+	del *.o 
+	del lab8.exe
